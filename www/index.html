@@ -15,6 +15,21 @@
 		   my_elem.innerHTML = '800 nautical miles';
 		   my_elem.style.color = 'red';
 		}
+    funciton login()
+    {
+      a = document.getElementById("username");
+      b = document.getElementByID("password");
+      c = "user";
+      d = "pass";
+      if (a===c && b===d)
+      {
+        ons.notification.alert("Username and Password are correct.")
+      }
+      else
+      {
+        ons.notification.alert("Username or Password incorrect!")
+      }
+    }
 	</script>
 </head>
 
@@ -36,29 +51,11 @@
       </p>
 
       <p>
-        <ons-button>Sign in</ons-button>
+        <ons-button onClick='login()'>Sign in</ons-button>
       </p>
     </div>
   </ons-page>
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<div id="wrapper">
 	
 	<div id="header">
