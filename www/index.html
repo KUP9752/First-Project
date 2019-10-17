@@ -20,7 +20,7 @@
     {
       a = document.getElementById('username').value;
       b = document.getElementById('password').value;
-      c = 'user';
+      c = 'User';
       d = 'pass';
       if (a===c && b===d)
       {
@@ -63,6 +63,10 @@
         
   <ons-template id='shackleton.html'>
     <ons-page id='shackleton'>
+      <ons-toolbar id='home-toolbar'>
+        <div class="left">Home</div>
+        <div class="center" onClick="quiz()">Quiz</div>
+      </ons-toolbar>
       <div id="wrapper">
       
       <div id="header">
@@ -88,18 +92,21 @@
       </div>
 
       <div class="clearme"></div>
-
-      <div id="quiz">
-        <h3> Quiz </h3>
-        <p> How far (according to Shackleton's wikipedia page) is it from Elephant Island to South Georgia in Nautical Miles? <span class="myquote" id="ans">  </span>  </p>
-        <p> <button onClick='chk_ans()'> Check Answer</button></p>
-      </div>
       <div id="footer">
         Thank you for visiting my page
       </div>
       </div>
     </ons-page>
-  </ons-template>
+    </ons-template>
+  <ons-template id="quiz.html">
+      <div id="quiz">
+        <h3> Quiz </h3>
+        <p> How far (according to Shackleton's wikipedia page) is it from Elephant Island to South Georgia in Nautical Miles? <span class="myquote" id="ans">  </span>  </p>
+        <p> <button onClick='chk_ans()'> Check Answer</button></p>
+      </div>
+    </ons-template>
+      
+  
 </body>
 
 </html>
