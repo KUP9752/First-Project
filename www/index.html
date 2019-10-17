@@ -17,10 +17,10 @@
 		}
     function login()
     {
-      a = document.getElementById('username');
-      b = document.getElementById('password');
-      c = "user";
-      d = "pass";
+      a = document.getElementById('username').value;
+      b = document.getElementById('password').value;
+      c = 'user';
+      d = 'pass';
       if (a===c && b===d)
       {
         ons.notification.alert('Username and Password are correct.');
@@ -37,16 +37,16 @@
   <ons-page>
     <div style="text-align:center;margin-top: 200px">
       <p>
-        <ons-input id="username" placeholder="Username" modifier="underbar">
+        <ons-input id='username' placeholder='Username' modifier='underbar'>
         </ons-input>
       </p>
 
       <p>
         <ons-input 
-          id="password"
-          placeholder="Password"
-          type="password"
-          modifier="underbar">
+          id='password'
+          placeholder='Password'
+          type='password'
+          modifier='underbar'>
         </ons-input>
       </p>
 
