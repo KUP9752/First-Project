@@ -33,12 +33,22 @@
         ons.notification.alert('Username or Password incorrect!');
       }
     }
+    function quiz()
+    {
+      var navigator = document.getElementById('navigator');
+      navigator.pushPage('quiz.html');
+
+    }
 	</script>
 </head>
 
 <body>
+  
   <ons-navigator id='navigator'>
     <ons-page>
+
+      
+
       <div style="text-align:center;margin-top: 200px">
         <p>
           <ons-input id='username' placeholder='Username' modifier='underbar'>
@@ -63,10 +73,13 @@
         
   <ons-template id='shackleton.html'>
     <ons-page id='shackleton'>
-      <ons-toolbar id='home-toolbar'>
+
+      <ons-toolbar id="home-toolbar">
         <div class="left">Home</div>
-        <div class="center" onClick="quiz()">Quiz</div>
+        <div class="center" onClick='quiz()'>Quiz</div>
+        <div class="center"> Imagine Copying Kagan's Project</div>
       </ons-toolbar>
+
       <div id="wrapper">
       
       <div id="header">
@@ -98,15 +111,27 @@
       </div>
     </ons-page>
     </ons-template>
-  <ons-template id="quiz.html">
-      <div id="quiz">
+
+  <ons-template id='quiz.html'>
+    <ons-page id='quiz'>
+      <div id='quiz'>
+
+          <ons-toolbar id="home-toolbar">
+
+            <div class="left" onClick=
+              "var navigator = document.getElementById('navigator');navigator.popPage();">
+              Back
+            </div>
+            </ons-toolbar>
+              
+        </br>      
         <h3> Quiz </h3>
         <p> How far (according to Shackleton's wikipedia page) is it from Elephant Island to South Georgia in Nautical Miles? <span class="myquote" id="ans">  </span>  </p>
         <p> <button onClick='chk_ans()'> Check Answer</button></p>
-      </div>
-    </ons-template>
-      
-  
+        
+        </div>
+  </ons-page>
+  </ons-template>
 </body>
 
 </html>
